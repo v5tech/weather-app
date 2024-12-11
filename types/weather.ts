@@ -34,10 +34,12 @@ export interface WeatherData {
       windScale: string
     }
     alarm: Array<{
-      type: string
-      level: string
-      content: string
-      publishTime: string
+      id: string
+      title: string
+      signaltype: string
+      signallevel: string
+      effective: string
+      severity: string
     }>
     lastUpdate: string
   }
