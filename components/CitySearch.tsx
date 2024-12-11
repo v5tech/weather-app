@@ -31,8 +31,8 @@ export function CitySearch({ onCitySelect, isLoading }: CitySearchProps) {
   const [cities, setCities] = useState<City[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const debounceTimer = useRef<NodeJS.Timeout>()
-  const inputRef = useRef<HTMLInputElement>(null)
+  const debounceTimer = useRef<NodeJS.Timeout | null>(null)
+  const inputRef = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
     if (value.length < 1) {
